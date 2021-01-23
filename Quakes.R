@@ -1,0 +1,16 @@
+E_quakes<-datasets::quakes
+sd(quakes$depth, na.rm = F)
+var(quakes$depth, y=NULL, na.rm=FALSE)
+skewness(quakes$depth,na.rm = FALSE)
+kurtosis(quakes$depth,na.rm = FALSE)
+summary(quakes)
+summary(quakes$depth)
+plot(quakes)
+plot(quakes$depth)
+plot(quakes$depth,type = "l")
+plot(quakes$depth,xlab = 'Depth of Earthquake', ylab = 'No. of instances', 
+     main = 'Earthquakes', col='blue')
+boxplot(quakes$depth, main= 'Boxplot')
+barplot(quakes$depth,main = 'Earthquakes', ylab = 'Depth', col = 'Red', horiz = F)
+hist(quakes$depth, main = 'Earthquakes', xlab = 'Depth', col = 'Blue')
+par(mfrow=c(2,3),mar=c(3,3,3,3),las=0,bty="o")
